@@ -6,7 +6,7 @@
 
 First you obviously need a K8s Single Node or Cluster.
 And because i use BGP (Border Gateway Protocol) for advertising some of my services,
-you will need a router that supports BGP in my Case this was OPNsense.
+you will need a router that supports BGP in my case this was OPNsense.
 
 So in short:
 ```
