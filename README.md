@@ -30,11 +30,11 @@ ipvs:
   strictARP: true
 ```
 
-First you should install MetalLB this can be done by executing this command:
+Then you should install MetalLB this can be done by executing this command:
 ```
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.9/config/manifests/metallb-native.yaml
 ```
-In case you are unsure refere to the official docs:
+In case you are unsure refer to the official docs:
 https://metallb.io/installation/
 
 After that make really really sure (in case of single Node use) that your node has no label named:
