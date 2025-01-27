@@ -16,10 +16,26 @@ So in short:
 
 ### Requirements in services
 
+First you should edit your kube-proxy if one is there.
+Just execute:
+
+```
+kubectl edit configmap -n kube-system kube-proxy
+```
+Then find these options below and edit them accordingly:
+```
+mode: "ipvs"
+[...]
+ipvs:
+  strictARP: true
+```
+
 First you should install MetalLB this can be done by executing this command:
 ```
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.9/config/manifests/metallb-native.yaml
 ```
+In case you are unsure refere to the official docs:
+https://metallb.io/installation/
 
 After that make really really sure (in case of single Node use) that your node has no label named:
 ```
